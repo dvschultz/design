@@ -97,10 +97,64 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+    padding: 20px;
+}
 
+h1,h2,h3,li {
+    font-size: 1em;
+    font-family: sans-serif;
+}
 
+nav li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 
+h1, #main-nav {
+    display: inline-block;
+    float: left;
+}
 
+h1 a, #main-nav a {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    padding: 0 .2em 10px .2em; 
+    overflow: hidden;
+}
+
+h1 a:after, #main-nav a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    bottom: 0;
+    left: 0;
+    background: blue;
+    transform: translateY(10px);
+    transition: all .1s;
+}
+
+h1 a:hover:after, #main-nav a:hover:after {
+    transform: translateY(0px);
+}
+
+main {
+    clear: both;
+    display: block;
+}
+
+section {
+    display: block;
+    width: 100%;
+}
+
+section h2 {
+    width: 100%;
+    text-align: center;
+}
 
 
 
