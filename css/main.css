@@ -72,6 +72,69 @@ FONTS
     font-style: normal;
 }
 
+/* first for IE 4–8 */
+@font-face {
+    font-family: "Yoga";
+    src: url("fonts/YogaWebPro.eot");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* then for WOFF-capable browsers */
+@font-face {
+    font-family: "Yoga";
+    src: url("fonts/YogaWebPro.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Yoga";
+    src: url("fonts/YogaWebPro-Italic.eot");
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* then for WOFF-capable browsers */
+@font-face {
+    font-family: "Yoga";
+    src: url("fonts/YogaWebPro-Italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Yoga";
+    src: url("fonts/YogaWebPro-Bold.eot");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* then for WOFF-capable browsers */
+@font-face {
+    font-family: "Yoga";
+    src: url("fonts/YogaWebPro-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Yoga";
+    src: url("fonts/YogaWebPro-BoldItalic.eot");
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* then for WOFF-capable browsers */
+@font-face {
+    font-family: "Yoga";
+    src: url("fonts/YogaWebPro-BoldItalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -181,10 +244,6 @@ h1,h2,h3,li {
     font-family: 'ParryGrot',sans-serif;
 }
 
-p {
-    font-family: 'Parry',serif;
-}
-
 nav li {
     padding: 0;
     margin: 0;
@@ -192,7 +251,7 @@ nav li {
 }
 
 #main-nav a {
-    text-transform: lowercase;
+    /*text-transform: lowercase;*/
 }
 
 header h1 {
@@ -214,11 +273,15 @@ h1 a, #main-nav a {
     color: black;
 }
 
+h1 a {
+    padding-left: 0;
+}
+
 #main-nav a {
     border-bottom: 1px solid black;
 }
 
-h1 a:after, #main-nav a:after {
+#main-nav a:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -230,7 +293,7 @@ h1 a:after, #main-nav a:after {
     transition: all .1s;
 }
 
-h1 a:hover:after, #main-nav a:hover:after {
+#main-nav a:hover:after {
     transform: translateY(0px);
 }
 
@@ -262,14 +325,78 @@ main {
     margin-top: 75px;
 }
 
-main h1, main p {
-    max-width: 700px;
+main header, main p {
+    max-width: 600px;
     margin: 0 auto;
 }
 
+.project-page main h1 {
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    position: relative;
+    font-size: 1.25rem;
+    width: 130px;
+    line-height: 1.2;
+}
+
+.project-page main h1:before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 1px;
+    background: black;
+    transform: rotate(-10deg);
+    position: absolute;
+    bottom: 28px;
+}
+
+.project-page main h1:after {
+    content: "";
+    display: block;
+    margin-bottom: 38px;
+}
+
+@media only screen and (min-width: 775px) {
+  .project-page main h1 {
+    transform: translateX(-65px);
+  }
+
+    .project-page main h1:before {
+        bottom: 8px;
+    }
+
+    .project-page main h1:after {
+        margin-bottom: 18px;
+    }
+}
+
+.project-page section {
+    clear: both;
+}
+
+
+
+.project-page h2 {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.75;
+}
+
 main p {
+    font-family: "Yoga", serif;
+    font-size: 1.1rem;
     line-height: 1.5;
-    margin-bottom: 1.5em;
+    
+}
+
+p + p {
+    text-indent: 2em;
+}
+
+p + .img-container {
+    margin-top: 1.5em;
 }
 
 
@@ -283,6 +410,17 @@ section h2 {
     width: 100%;
     text-align: center;
 }
+
+.img-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.img-container figure {
+    margin: auto;
+}
+
 
 footer {
     margin: 50px 0;

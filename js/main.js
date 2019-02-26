@@ -5,11 +5,21 @@ images = {
 		"assets/textures/dots-sm.png",
 		"assets/textures/vert.png",
 		"assets/textures/x.png",
+	],
+	textures2: [
 		"assets/textures/diag2.png",
 		"assets/textures/dots-md2.png",
 		"assets/textures/dots-sm2.png",
 		"assets/textures/vert2.png",
 		"assets/textures/x2.png",
+	],
+	about: [
+		"assets/about/bug.png",
+		"assets/about/dots.png",
+		"assets/about/field.png",
+		"assets/about/painting.png",
+		"assets/about/pixels.png",
+		"assets/about/pixels.png",
 	],
 	nyt: [
 		"assets/nyt/bn.png",
@@ -180,8 +190,6 @@ function bands(c,ctx,p,name) {
 		startX = randInt(maxW*.125,maxW*.5);
 		startY = randInt(maxH*.125,maxH*.75);
 		let h2 = c.nextSibling.nextSibling;
-		// console.log(c.nextSibling.nextSibling);
-		// console.log(h2);
 		h2.style.top = ((startY/maxH)*100) + "%";
 		h2.style.left = ((startX/maxW)*100) + "%";
 		h2.style.position = "absolute";
@@ -290,8 +298,6 @@ function blocks(c,ctx,p,name) {
 		startX = randInt(maxW*.125,maxW*.5);
 		startY = randInt(maxH*.125,maxH*.75);
 		let h2 = c.nextSibling.nextSibling;
-		// console.log(c.nextSibling.nextSibling);
-		// console.log(h2);
 		h2.style.top = ((startY/maxH)*100) + "%";
 		h2.style.left = ((startX/maxW)*100) + "%";
 		h2.style.position = "absolute";
@@ -301,23 +307,14 @@ function blocks(c,ctx,p,name) {
 	
 }
 
-// function preload() {
-//     for (var i = 0; i < arguments.length; i++) {
-//         images.push(new Image());
-//         images[i].src = preload.arguments[i];
-//     }
-// }
-
 function getTextures(name,picks) {
 	texts = [];
 
 	let imgOpts = images[name].slice(0);
-	// console.log(imgOpts);
 
 	for(let p = 0; p < picks; p++) {
 		let i = randInt(0,imgOpts.length-1);
 		texts.push(imgOpts[i]);
-		console.log(imgOpts[i]);
 		imgOpts.splice(i,1);
 	}
 
@@ -325,7 +322,7 @@ function getTextures(name,picks) {
 	texts.push(images.textures[randInt(0,images.textures.length)]);
 	texts.push(images.textures[randInt(0,images.textures.length)]);
 	texts.push(images.textures[randInt(0,images.textures.length)]);
-	texts.push(images.textures[randInt(0,images.textures.length)]);
+	texts.push(images.textures2[randInt(0,images.textures2.length)]);
 	// texts.push(images.textures[randInt(0,images.textures.length)]);
 	return texts;
 }
