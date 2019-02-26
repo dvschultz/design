@@ -6,6 +6,73 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+/*
+FONTS
+*/
+
+@font-face {
+    /* This declaration targets Internet Explorer */
+    font-family: 'ParryGrot';
+    src: url('fonts/parrygrotesque-bold-webfont.eot');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    /* This declaration targets everything else */
+    font-family: 'ParryGrot';
+    src: url(//:) format('no404'), url('fonts/parrygrotesque-bold-webfont.woff') format('woff'), url('fonts/parrygrotesque-bold-webfont.ttf') format('truetype'), url('fonts/parrygrotesque-bold-webfont.svg#webfontyG9BqkGf') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    /* This declaration targets Internet Explorer */
+    font-family: 'ParryGrot';
+    src: url('fonts/parrygrotesque-normal-webfont.eot');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    /* This declaration targets everything else */
+    font-family: 'ParryGrot';
+    src: url(//:) format('no404'), url('fonts/parrygrotesque-normal-webfont.woff') format('woff'), url('fonts/parrygrotesque-normal-webfont.ttf') format('truetype'), url('fonts/parrygrotesque-normal-webfont.svg#webfont9QE7Dtls') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    /* This declaration targets Internet Explorer */
+    font-family: 'Parry';
+    src: url('fonts/parry-normal-webfont.eot');
+}
+
+@font-face {
+    /* This declaration targets everything else */
+    font-family: 'Parry';
+    src: url(//:) format('no404'), url('fonts/parry-normal-webfont.woff') format('woff'), url('fonts/parry-normal-webfont.ttf') format('truetype'), url('fonts/parry-normal-webfont.svg#webfontJq7KWXVB') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    /* This declaration targets Internet Explorer */
+    font-family: 'Parry';
+    src: url('parry-bold-webfont.eot');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    /* This declaration targets everything else */
+    font-family: 'Parry';
+    src: url(//:) format('no404'), url('fonts/parry-bold-webfont.woff') format('woff'), url('fonts/parry-bold-webfont.ttf') format('truetype'), url('fonts/parry-bold-webfont.svg#webfonth1mGzB0K') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -97,13 +164,25 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+:root { 
+    --gray: rgb(240,240,240); 
+    --purple: #6600FF;
+    --blue: #0066ff;
+} 
+
 body {
     padding: 20px;
+    background: var(--gray);
 }
 
 h1,h2,h3,li {
+    margin: 0;
     font-size: 1em;
-    font-family: sans-serif;
+    font-family: 'ParryGrot',sans-serif;
+}
+
+p {
+    font-family: 'Parry',serif;
 }
 
 nav li {
@@ -112,7 +191,16 @@ nav li {
     list-style: none;
 }
 
-h1, #main-nav {
+#main-nav a {
+    text-transform: lowercase;
+}
+
+header h1 {
+    margin-right: 50px;
+    font-weight: 400;
+}
+
+header h1, #main-nav {
     display: inline-block;
     float: left;
 }
@@ -121,19 +209,24 @@ h1 a, #main-nav a {
     display: inline-block;
     text-decoration: none;
     position: relative;
-    padding: 0 .2em 10px .2em; 
+    padding: 0 .2em 6px .2em; 
     overflow: hidden;
+    color: black;
+}
+
+#main-nav a {
+    border-bottom: 1px solid black;
 }
 
 h1 a:after, #main-nav a:after {
     content: "";
     position: absolute;
     width: 100%;
-    height: 10px;
+    height: 6px;
     bottom: 0;
     left: 0;
-    background: blue;
-    transform: translateY(10px);
+    background: black;
+    transform: translateY(6px);
     transition: all .1s;
 }
 
@@ -141,12 +234,47 @@ h1 a:hover:after, #main-nav a:hover:after {
     transform: translateY(0px);
 }
 
+canvas{
+    width: 100%;
+    max-width: 800px;
+    /*transform: scale(.5);*/
+    /*background: blue;*/
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity .25s;
+    margin-bottom: 25px;
+}
+
+canvas.vertical {
+    max-width: 600px;
+}
+
+canvas.fade-in {
+    opacity: 1;
+}
+
 main {
     clear: both;
     display: block;
+    max-width: 1400px;
+    margin-top: 75px;
 }
 
+main h1, main p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+main p {
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+
 section {
+    margin: 50px 0;
     display: block;
     width: 100%;
 }
@@ -155,6 +283,97 @@ section h2 {
     width: 100%;
     text-align: center;
 }
+
+footer {
+    margin: 50px 0;
+}
+
+footer li {
+    padding: .25em;
+}
+
+footer li a{
+    display: block;
+    padding:0;
+    text-align: center;
+    color: black;
+    text-decoration-style: wavy;
+    transition: color, text-decoration-color .2s;
+}
+
+footer li a:hover{
+    color: blue;
+    text-decoration-color: var(--blue);
+}
+
+footer li a:visited, footer li a:visited:hover {
+    
+    text-decoration-style: wavy;
+    text-decoration-color: var(--purple);
+}
+footer li a:visited:hover {
+    color: var(--purple);
+}
+
+#index h2 {
+    display: inline;
+    position: absolute;
+    padding: .25em .5em .4em;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    background: black;
+    font-size: 1rem;
+    /*-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: never;*/
+    border-bottom: 10px solid var(--blue);
+}
+
+@media only screen and (min-width: 600px) {
+  #index h2 {
+    font-size: 1.75rem;
+  }
+}
+
+#index a:visited h2 {
+    border-bottom: 10px solid var(--purple);
+}
+
+#index section {
+    max-width: 800px;
+    max-height: 100vh;
+    margin: 50px auto;
+    padding: 50px 0;
+    position: relative;
+}
+
+#index section:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#index section:after {
+    content: "— — — — — — — — — — — — — —";
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-decoration: underline overline;
+    text-decoration-style: wavy;
+    position: relative;
+    z-index: 1000;
+    bottom: -60px;
+    font-family: "ParryGrot",sans-serif;
+}
+
+#index section:last-of-type:after {
+    display: none;
+}
+
+#index section a {
+    text-decoration: none;
+}
+
 
 
 
