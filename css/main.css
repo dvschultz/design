@@ -414,7 +414,19 @@ section h2 {
 .img-container {
     display: flex;
     max-width: calc(1000px + 1.5rem);
-    margin: 1.5rem auto;
+    margin: 3rem auto 4.5rem;
+}
+
+.img-container + .img-container {
+    margin-top: -3rem;
+}
+
+.align-bottom {
+    align-items: flex-end;
+}
+
+.app-icon {
+    border-radius: .75rem;
 }
 
 /*.img-container figure {
