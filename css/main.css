@@ -380,6 +380,7 @@ main header, main p {
 
 .project-page section {
     clear: both;
+    padding-bottom: 50px;
 }
 
 .project-page h2 {
@@ -511,7 +512,7 @@ footer li a:visited:hover {
     padding-top: 0;
 }
 
-#index section:after {
+section:after {
     content: "— — — — — — — — — — — — — —";
     width: 100%;
     display: block;
@@ -523,14 +524,15 @@ footer li a:visited:hover {
     bottom: -60px;
     font-family: "ParryGrot",sans-serif;
 }
-
-#index section:last-of-type:after {
+section:last-of-type:after {
     display: none;
 }
 
 #index section a {
     text-decoration: none;
 }
+
+
 
 
 
