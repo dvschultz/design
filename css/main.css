@@ -244,6 +244,13 @@ h1,h2,h3,li {
     font-family: 'ParryGrot',sans-serif;
 }
 
+figcaption,small {
+    font-family: 'ParryGrot',sans-serif;
+    font-size: .75rem;
+    padding-top: 5px;
+    color: #666;
+}
+
 nav li {
     padding: 0;
     margin: 0;
@@ -393,11 +400,6 @@ p + p {
     text-indent: 2em;
 }
 
-p + .img-container {
-    margin-top: 1.5em;
-}
-
-
 section {
     margin: 50px 0;
     display: block;
@@ -411,12 +413,20 @@ section h2 {
 
 .img-container {
     display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: calc(1000px + 1.5rem);
+    margin: 1.5rem auto;
 }
 
-.img-container figure {
+/*.img-container figure {
     margin: auto;
+}*/
+
+.img-container figure {
+    margin: 0 .75rem;
+}
+
+.img-container img {
+    max-width: 100%;
 }
 
 
