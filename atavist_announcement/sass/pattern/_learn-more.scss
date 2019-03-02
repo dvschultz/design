@@ -1,0 +1,109 @@
+.learn-more {
+	position: relative;
+	margin-top: 10em;
+	@include ios-vh() {
+		margin-top: 20vh;	
+	}
+	background-color: rgba(102,102,102,.9);
+	color: #fff;
+
+	@media print { 
+		color: black !important; 
+	}
+
+	h2 {
+		padding-top: 3em;
+		margin-bottom: 0;
+	}
+
+	a {
+		color: white;
+
+		&:after {
+			background-color: white;
+		}
+	}
+
+	p {
+		text-align: center;
+		font-family: "freight-sans-pro";
+		font-weight: 300;
+	}
+
+	input {
+		font-weight: 400;
+		color: white;
+		
+		&[type="email"], &[type="text"] {
+			border: 1px dashed rgba(255,255,255,.5);
+			border-bottom-style: solid;
+			border-bottom-color: rgba(255,255,255,1);
+			@include box-shadow(0 0 0 rgba(0,0,0,0));
+		}
+
+		&[type="submit"] {
+			border-color: transparent;
+			background: white;
+			color: black;
+		}
+	}
+
+	.press-link {
+		font-family: "freight-micro-pro";
+	}
+}
+
+#mc_embed_signup {
+	width: 100%;
+	margin-top: 4em;
+
+	@media only screen 
+	and (min-width : 480px) {
+		width: 40%;
+		margin-left: 30%;
+		margin-right: 30%;
+	}
+
+	input{
+		@include box-sizing(border-box);
+		text-align: center;
+
+		&[type="text"], &[type="email"] {
+			width: 100%;
+		}
+
+		&[type="submit"] {
+			width: 100%;
+
+			@media only screen 
+			and (min-width : 769px) {
+				width: 45%;
+				float: left;
+				margin-right: 10%;
+			}
+		}
+	}
+}
+
+.chapter.learn-more {
+	@media only screen 
+	and (max-device-height : 480px) {
+		min-height: 200px;
+	}
+
+	@media only screen 
+	and (max-device-height : 1024px)
+	and (orientation : portrait) {
+		min-height: 200px;
+	}
+
+	@media only screen 
+	and (max-device-height : 1024px)
+	and (orientation : landscape) {
+		min-height: 200px;
+	}
+
+	@include ios-vh() {
+		min-height: 25vh;
+	}
+}

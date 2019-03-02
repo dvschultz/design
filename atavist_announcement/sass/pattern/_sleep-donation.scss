@@ -1,0 +1,110 @@
+.chapter.sleep-donation {
+	overflow: visible;
+	margin-top: 0 !important;
+
+	@media only screen 
+	and (max-device-height : 480px) {
+		min-height: 100px;
+	}
+
+	@media only screen 
+	and (max-device-height : 1024px)
+	and (orientation : portrait) {
+		min-height: 100px;
+	}
+
+	@media only screen 
+	and (max-device-height : 1024px)
+	and (orientation : landscape) {
+		min-height: 100px;
+	}
+
+	@include ios-vh() {
+		min-height: 100px;
+	}
+
+	margin-bottom: 0;
+
+	.s-cap {
+		width: 76px;
+		height: 76px;
+		margin: 0 auto;
+
+		//fun little hack because Safari 6.1 is a mess
+		.no-chrome & rect {
+			stroke-width: 1.5 !important;
+		}
+
+		@media print { 
+			path,rect {
+				stroke-dasharray: none !important;
+			} 
+		}
+	}
+
+	header {
+		margin-bottom: 6em;
+	}
+
+	h2 {
+		position: relative;
+		padding: 1em 0 .5em;
+		margin: 0;
+		font-family: "freight-sans-pro";
+		font-weight: 900;
+
+		font-size: 2.75em;
+		line-height: 1;
+
+		@media only screen 
+		and (min-width : 600px) {
+			font-size: 3.5em;
+		}
+
+		+ h4 {
+			font-weight: 400;
+			font-size: 2.125em;
+			line-height: 1.25;
+		}
+	}
+
+	h4 {
+		text-align: center;
+	}
+
+	.praise {
+		@include ios-vh() {
+			padding-bottom: 12.5vh;
+		}
+
+		.blockquote {
+			min-height: 6em;
+			overflow: visible;
+		}
+
+		blockquote {
+			p {
+				text-indent: -.4em;
+			}
+		}
+	}
+
+	.bio {
+		padding-top: 3em;
+
+		p {
+			font-size: 1.25em;
+		}
+	}
+	
+
+	.body + .s-cap {
+		// iPads (portrait) ----------- //
+		@media only screen 
+		and (min-device-width : 768px) 
+		and (max-device-width : 1024px) 
+		and (orientation : portrait) {
+			margin-top: 1.5em;	
+		}
+	}
+}

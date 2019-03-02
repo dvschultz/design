@@ -1,0 +1,21 @@
+.blockquote {
+
+	blockquote {
+		p {
+			font-style: italic;
+
+			em {
+				font-style: normal;
+			}
+		}
+	}
+
+	figcaption {
+		p {
+			margin-top: 0;
+			font-family: "freight-sans-pro";
+			font-weight: 600;
+			@include all-caps(.1em);	
+		}
+	}
+}

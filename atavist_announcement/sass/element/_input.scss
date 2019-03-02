@@ -1,0 +1,31 @@
+input {
+	font-family: "freight-sans-pro";
+	font-weight: 500;
+	color: black;
+
+	&[type="text"], &[type="email"], &[type="submit"] {
+		padding: .25em .375em;
+		border: 1px solid black;
+		margin: .75em 0;
+		background: transparent;
+	}
+
+	&[type="submit"] {
+		@include border-radius(.25em);
+		@include all-caps(.1em);
+	}
+}
+
+// http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css
+::-webkit-input-placeholder {
+	color: black;
+}
+:-moz-placeholder {
+	color: black;
+}
+::-moz-placeholder {
+	color: black;
+}
+:-ms-input-placeholder {
+	color: black;
+}

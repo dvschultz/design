@@ -1,0 +1,79 @@
+.different {
+	background-color: $red;
+	color: white;
+
+	@media print { 
+		color: black !important; 
+	}
+
+	padding-top: 3em;
+	padding-bottom: 3em;
+	margin-bottom: 5em;
+
+	@include ios-vh() {
+		min-height: 102vh;
+	}
+
+	h2 {
+		margin-bottom: 1em;
+		padding-top: 0;
+
+		text-align: left;
+		@include remove-all-caps();
+		font-family: "freight-sans-pro",sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 4em;
+		line-height: 1;
+
+		@media only screen 
+		and (min-width : 600px) {
+			float: left;
+			width: 45%;
+			margin-right: 5%;
+		}
+		
+	}
+
+	a {
+		color: transparentize(white, .375);
+
+		&:after {
+			background: black;
+		}
+
+		&:hover {
+
+			&:after {
+				background: white;
+			}
+		}
+	}
+
+	p {
+		font-weight: 300;
+		font-size: 1.875em;
+
+		@media only screen 
+		and (min-width : 1024px) {
+			
+			&:nth-of-type(1) {
+				padding-top: .675em;
+			}
+
+			&:nth-of-type(1) {
+				width: 75%;
+				margin-left: 25%;
+			}
+
+			&:nth-of-type(2) {
+				width: 80%;
+			}
+
+			&:nth-of-type(3) {
+				width: 80%;
+				margin-left: 12.5%;
+			}
+		}
+	}
+}

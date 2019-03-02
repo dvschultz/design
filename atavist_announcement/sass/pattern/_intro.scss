@@ -1,0 +1,125 @@
+.intro {
+	margin-top: 0;
+	margin-bottom: 0 !important;
+}
+
+.parallax-container {
+	display: none;
+	position: relative;
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+
+	@include ios-vh() {
+		height: 60vh;
+	}
+	
+	@include transform-origin(0 0 0);
+
+    @media print { 
+		opacity: 1 !important; 
+	}
+
+	> div {
+		position: absolute;
+		@include ios-vh() {
+			top: 10vh;
+		}
+		left: 0;
+		width: 100%;
+		font-size: 10em;
+		text-align: center;
+
+		path {
+			stroke: black;
+		}
+
+		@include transform(translate(0,0));
+
+		
+		&.red {
+			path {
+				stroke: $red;
+			}
+		}
+	}
+
+	#bar {
+		svg {
+			position: relative;
+			z-index: 2;
+		}
+
+		path {
+			stroke: none;
+		}
+
+		//&:after {
+		#barAnimate {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 180px;
+			z-index: 1;
+			height: 112px;
+			//width: 100%;
+			background: rgba(102,102,102,.9);
+
+		    @include animation-name(slideIn);
+			@include animation-iteration-count(1);
+			@include animation-timing-function(ease);
+			
+			@include animation-fill-mode(forwards); /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+		 	@include animation-duration(3s);
+		 	@include animation-delay(3s);
+
+		 	@media print { 
+				width: 100% !important;
+			}
+		}
+
+	}
+}
+
+.body:nth-child(4) {
+	top: -300px;
+	margin-bottom: -280px;
+
+	@media only screen 
+	and (min-width : 480px) {
+		top: 180px;
+		margin-bottom: -160px;
+	}
+
+	@media only screen 
+	and (min-width : 768px) {
+		top: 0;
+		margin-bottom: 0px;
+	}
+
+	opacity:0;  /* make things invisible upon start */
+	// call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time 
+	@include animation-name(fadeIn);
+	@include animation-iteration-count(1);
+	@include animation-timing-function(ease);
+	
+	@include animation-fill-mode(forwards); /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+ 	@include animation-duration(1.5s);
+ 	@include animation-delay(5.5s);
+
+ 	@media print { 
+		top: 0;
+		opacity: 1 !important; 
+	}
+}
+
+// animations
+// https://gist.github.com/ericam/1607696
+@include keyframes(slideIn) {
+  from { width:0%; } to { width:100%; }
+}
+
+@include keyframes(fadeIn) {
+  from { opacity:0; } to { opacity:1; }
+}
+

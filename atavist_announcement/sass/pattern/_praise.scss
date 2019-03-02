@@ -1,0 +1,167 @@
+.praise {
+	clear: both;
+	position: relative;
+
+	@media only screen 
+	and (min-width : 480px) {
+		padding-top: 3em;
+	}
+
+	@media only screen 
+	and (min-width : 800px) {
+		width: 80%;
+		margin: 0 10%;
+	}
+
+	> figure {
+		padding: 1.5em 0;
+		position: relative;
+		text-align: left;
+
+		@media only screen 
+		and (min-width : 640px) {
+			min-height: 99px;
+			width: 45%;
+			padding: 1.5em 5%;
+
+
+			.ios & {
+				&:before,&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					background-color: #bfbfbf;
+					@include border-radius(2px);
+				}
+
+
+				&:before {
+					top: 1%;
+					width: 3px;
+					height: 102%;
+				}
+
+				&:after {
+					bottom: .75em;
+					width: 20%;
+					height: 3px;
+				}
+			}
+
+
+			&:nth-of-type(odd) {
+				text-align: right;
+				padding-left: 0;
+
+				.svgAngle {
+					left: 107.5%;
+				}
+
+				.ios & {
+					&:before {
+						right: 0%;
+						margin-right: -2px;
+					}
+
+					&:after {
+						right: 0%;
+					}
+				}
+
+			}
+			&:nth-of-type(even) {
+				left: 50%;
+				padding-right: 0%;
+				
+				.svgAngle {
+					left: -25%;
+				}
+
+				.ios & {
+					&:before {
+						left: 0%;
+						margin-left: -2px;
+					}
+
+					&:after {
+						left: 0%;
+					}
+				}
+			}
+		}
+		
+		@media only screen 
+		and (min-width : 800px) {
+			width: 45%;
+			padding: 1.5em 2.5%;
+		}
+	}
+
+	.svgAngle {
+		position: absolute;
+		top: 1em;
+
+		@media print { 
+			display: none; 
+		}
+	}
+
+	.awards {
+		font-family: "freight-sans-pro";
+		
+		p {
+			font-weight: 600;
+			font-size: 1.25em;
+		}
+	}
+
+	h4,h5 {
+		font-family: "freight-text-pro";
+		font-weight: 900;
+		font-size: 1.5em;
+		@include remove-all-caps();
+
+		margin-bottom: 1em;
+
+		@media only screen 
+		and (min-width : 480px) {
+			margin-bottom: 2em;
+		}
+	}
+
+	blockquote {
+		margin: 0;
+
+		p {
+			font-size: 1.25em;
+			line-height: 1.25;
+			margin: 0;
+			text-indent: -.4em;
+
+			&:before {
+				content: '\201C';
+			}
+
+			&:after {
+				content: '\201D';
+			}
+		}
+
+	}
+
+	figcaption {
+		margin: 0;
+
+		p {
+			font-size: 1em;
+			margin: .25em 0 0;
+			padding-left: 1.2em;
+			line-height: 1.25;
+			text-indent: -1.4em;
+
+			&:before {
+				content: $em-dash + '\200A';
+			}
+		}
+	}
+}

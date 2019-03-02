@@ -1,0 +1,157 @@
+.team {
+	position: relative;
+	@include ios-vh() {
+		margin-bottom: 20vh;
+	}
+	.body {
+		position: relative;
+		@include ios-vh() {
+			padding-top: 20vh;
+		}
+	}
+
+	h2 {
+		color: black;
+		@include transition(all .5s linear);
+	}
+
+	&.sticky {
+		h2 {
+			color: transparentize($gray,.5);
+		}
+	}
+
+	.frances {
+		margin-bottom: .75em;
+
+		@media only screen 
+		and (min-width: 640px) {
+			
+			margin-bottom: 6em;
+			
+			@include ios-vh() {
+				margin-bottom: 25vh;
+			}
+		}
+	}
+
+	h3 {
+		font-family: "freight-text-pro";
+		font-size: 1em;
+		text-transform: none;
+		letter-spacing: 0;
+
+		+ p {
+			margin-top: 0;
+		}
+
+	}
+
+	ul {
+		overflow: auto;
+		list-style: none;
+		padding: 0;
+		margin-bottom: 5em;
+	}
+
+	li {
+		position: relative;
+
+		@media only screen 
+		and (min-width : 480px) {
+			min-height: 15em;
+		}
+		
+
+		@media only screen 
+		and (min-width : 640px) {
+			width: 45%;
+		}
+
+		@media only screen 
+		and (min-width : 1024px) {
+			width: 33%;
+		}
+
+		&:nth-child(odd) {
+			left: 0;
+
+			@media only screen 
+			and (min-width : 1024px) {
+				left: 10%;
+			}
+		}
+
+		&:nth-child(even) {
+			left: 0;
+			@media only screen 
+			and (min-width : 640px) {
+				left: 50%;
+			}
+
+			@media only screen 
+			and (min-width : 1024px) {
+				left: 60%;
+			}
+		}
+	}
+
+	.svgAngle {
+		margin-top: -4.5em;
+		position: relative;
+
+		@include transform(scale(.8));
+
+		@media only screen 
+		and (max-width : 480px) {
+			display: none !important;
+		}
+
+		@media only screen 
+		and (min-width: 640px) {
+			@include transform(scale(1));
+		}
+
+		@media print { 
+			display: none !important; 
+		}
+
+		&:nth-of-type(odd) {
+			left: 0;
+
+			@media only screen 
+			and (min-width: 640px) {
+				left: 60%;
+			}
+
+			@media only screen 
+			and (min-width: 1024px) {
+				left: 50%;
+			}
+		}
+
+		&:nth-of-type(even) {
+			left: 0;
+
+			@media only screen 
+			and (min-width: 640px) {
+				left: -5%;
+			}
+
+			@media only screen 
+			and (min-width: 1024px) {
+				left: 10%;
+			}
+		}
+
+		&:nth-of-type(4) {
+			margin-top: 0em;
+		}
+
+		&:nth-of-type(2),&:nth-of-type(3) {
+		}
+	}
+}
+
+
+

@@ -1,0 +1,23 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+Designer/Developer: Derrick Schultz
+Contact: derrick.schultz (a) iac.com
+Twitter: @dvsch
+From: New York City, New York
+
+Writer: Frances Coady
+
+Editor and Writer: Kianoosh Hashemzadeh
+
+Editor and Writer: Ryan Chapman
+
+# THANKS
+Team at Atavist http://atavist.com
+
+# TECHNOLOGY COLOPHON
+Last update: YYYY/MM/DD    
+Standards: HTML5, CSS3      
+Components: Normalize.css, jQuery, Modernizr                            
+Software: Sublime Text, Illustrator, Photoshop, InkScape

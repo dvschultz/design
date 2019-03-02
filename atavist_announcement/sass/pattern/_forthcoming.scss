@@ -1,0 +1,22 @@
+.forthcoming {
+	text-align: center;
+
+	margin: 0;
+
+	.body {
+		position: relative;
+		padding-top: 6em;
+
+		@include ios-vh() {
+			padding-top: 20vh;
+		}
+	}
+	
+
+	h2 {
+		color: black;
+		@include transition(all .5s linear);
+	}
+
+	// see _title for .title styles
+}

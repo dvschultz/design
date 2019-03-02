@@ -430,6 +430,10 @@ section h2 {
     flex-direction: column;
 }
 
+.vimeo-container {
+    justify-content: center;
+}
+
 @media only screen and (min-width: 800px) {
     .img-container {
         flex-direction: row;

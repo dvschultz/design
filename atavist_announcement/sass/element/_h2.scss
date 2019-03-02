@@ -1,0 +1,15 @@
+h2 {
+	width: 100%;
+	max-width: 1024px;
+	margin: 0;
+	font-family: "freight-micro-pro";
+	font-weight: 400;
+	font-size: 1.25em;
+	@include all-caps(.1em);
+	text-align: center;
+
+	@media only screen 
+	and (min-width : 768px) {
+		
+	}
+}

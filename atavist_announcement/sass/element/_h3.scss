@@ -1,0 +1,8 @@
+h3 {
+	margin: 0;
+	font-family: "freight-sans-pro";
+	font-weight: 900;
+	font-size: 2em;
+	line-height: 1.5;
+	@include all-caps();
+}

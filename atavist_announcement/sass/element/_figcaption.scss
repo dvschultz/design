@@ -1,0 +1,5 @@
+figcaption {
+	font-family: "freight-sans-pro";
+	font-size: .75em;
+	@include all-caps();
+}

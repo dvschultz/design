@@ -1,0 +1,46 @@
+a {
+	color: black;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+
+	&:after {
+		content:'';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		height: 2px;
+		width: 100%;
+		background-color: $red;
+		@include border-radius(1em);
+		@include transition(all .5s ease-in-out);
+	}
+
+	.no-touch &:hover {
+		&:after {
+			background-color: black;
+		}
+	}
+}
+
+a.buy-button {
+	padding: .5em 1em;
+	margin-bottom: 1em;
+	background: $red;
+
+	font-family: "freight-sans-pro";
+	font-size: 1.5em;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+
+	border-radius: .2em;
+
+	&:after {
+		display: none;
+	}
+
+	&:hover {
+		background: darken($red, 10%);
+	}
+}

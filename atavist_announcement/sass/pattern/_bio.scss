@@ -1,0 +1,71 @@
+.bio {
+	padding-top: 3em;
+	
+	@media only screen 
+	and (min-width : 800px) {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;	
+	}
+
+	.headshot {
+		position: relative;
+		width: 50%;
+		margin: 0 25% 1em;
+
+		@media only screen 
+		and (min-width : 600px) {
+			float: left;
+			width: 25%;
+			margin: .25em 5% .25em 0;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		figcaption {
+			color: #aaa;
+
+			.csstransforms & {
+				position: absolute;
+				left: -.375em;
+				bottom: .4em;
+				@include transform-origin(0,100%);
+				@include transform(rotate(270deg));
+			}
+		}
+
+		+ p {
+			margin-top: 0;
+		}
+	}
+
+	p {
+		text-align: left;
+		font-weight: normal;
+		font-size: 1.25em !important;
+
+		span {
+			font-weight: 500;
+			font-size: .8em;
+			@include all-caps(.1em);
+		}
+
+		.sleep-donation & {
+			font-size: 1.375em !important;
+		}
+	}
+
+	ul { 
+		list-style: none;
+		padding-left: 0;
+
+		> li {
+			font-size: 1rem;
+			clear: both;
+			overflow: auto;
+		}
+	}
+
+}
