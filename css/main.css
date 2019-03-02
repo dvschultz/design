@@ -394,7 +394,18 @@ main p {
     font-family: "Yoga", serif;
     font-size: 1.1rem;
     line-height: 1.5;
-    
+}
+
+main p a {
+    color: var(--blue);
+}
+
+main p a:visited {
+    color: var(--purple);
+}
+
+main p a:hover {
+    color: black;
 }
 
 p + p {
@@ -415,17 +426,41 @@ section h2 {
 .img-container {
     display: flex;
     max-width: calc(1000px + 1.5rem);
-    margin: 3rem auto 4.5rem;
+    margin: 1.5rem 0;
+    flex-direction: column;
 }
+
+@media only screen and (min-width: 800px) {
+    .img-container {
+        flex-direction: row;
+        margin: 3rem auto 4.5rem;
+    }
+
+    .img-container + .img-container {
+        margin-top: -3rem;
+    }
+
+    .flex-2by2 {
+        flex-wrap: wrap;
+    }
+
+    .flex-2by2 figure {
+        width: calc(50% - 1.5rem);
+    }
+
+     .flex-2by2 figure:nth-of-type(1),.flex-2by2 figure:nth-of-type(2) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
 
 .img-container:last-child {
     margin-bottom: 0;
 }
 
 
-.img-container + .img-container {
-    margin-top: -3rem;
-}
+
 
 .align-bottom {
     align-items: flex-end;
@@ -440,10 +475,26 @@ section h2 {
 }*/
 
 .img-container figure {
-    margin: 0 .75rem;
+    margin: 0 0 1.5rem;
 }
 
-.img-container img {
+@media only screen and (min-width: 800px) {
+    .img-container figure {
+        margin: 0 .75rem;
+    }
+
+    #bbvday2019-videos figure:first-of-type {
+        flex: 1.516666667;
+        /*width: 70%;*/
+    }
+
+    #bbvday2019-videos figure:nth-of-type(2) {
+        flex: 0.764705882;
+        /*width: 70%;*/
+    }
+}
+
+.img-container img, .img-container video {
     max-width: 100%;
 }
 
