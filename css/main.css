@@ -670,7 +670,7 @@ section:after {
     bottom: -60px;
     font-family: "ParryGrot",sans-serif;
 }
-section:last-of-type:after {
+.last-project:after, section.credits:after {
     display: none;
 }
 
