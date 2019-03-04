@@ -70,7 +70,7 @@ images = {
 		"assets/bbvday/bbvday2019.png",
 		"assets/bbvday/uplifting.png",
 		"assets/bbvday/vday2012.png",
-		"assets/bbvday/2018-3.png",
+		//"assets/bbvday/2018-3.png",
 		"assets/bbvday/kanye.png",
 		"assets/bbvday/kanye.png",
 	]
