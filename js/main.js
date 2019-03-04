@@ -133,28 +133,28 @@ function bands(c,ctx,p,name) {
 
 	let texts = getTextures(name,3);
 	loadImages(texts, function(images) {
-		ctx.fillStyle = "green";
+		// ctx.fillStyle = "green";
 		let startX = randInt(0,maxW*.25);
 		let startY = 0;
 		let w = randInt(maxW*.8, (maxW-startX));
 		let h = randInt(maxH*.125,maxH*.5);
-		ctx.fillRect(startX*50, startY*50, w*50, h*50);
+		// ctx.fillRect(startX*50, startY*50, w*50, h*50);
 		ctx.drawImage(images[0], startX*50, startY*50, w*50, h*50, startX*50, startY*50, w*50, h*50);
 
-		ctx.fillStyle = "orange";
+		// ctx.fillStyle = "orange";
 		startX = randInt(0,maxW*.25);
 		startY+=h;
 		w = randInt(maxW*.8, (maxW-startX));
 		h = randInt(maxH*.125,maxH*.5);
-		ctx.fillRect(startX*50, startY*50, w*50, h*50);
+		// ctx.fillRect(startX*50, startY*50, w*50, h*50);
 		ctx.drawImage(images[1], startX*50, (images[1].height/2)-((h*50)/2), w*50, h*50, startX*50, startY*50, w*50, h*50);
 
-		ctx.fillStyle = "red";
+		// ctx.fillStyle = "red";
 		startX = randInt(0,maxW*.25);
 		startY+=h;
 		w = randInt(maxW*.8, (maxW-startX));
 		h = maxH-startY;
-		ctx.fillRect(startX*50, startY*50, w*50, h*50);
+		// ctx.fillRect(startX*50, startY*50, w*50, h*50);
 		ctx.drawImage(images[2], startX*50, images[2].height-(h*50), w*50, h*50, startX*50, startY*50, w*50, h*50);
 
 		// ctx.fillStyle = "black";
@@ -260,8 +260,7 @@ function blocks(c,ctx,p,name) {
 		hrand = Math.random();
 		if (hrand < .75) h = maxH-centerY;
 		if (hrand < .25) w = maxW-centerX;
-		ctx.fillRect( (centerX-w)*50, centerY*50, w*50, h*50 );
-
+		// ctx.fillRect( (centerX-w)*50, centerY*50, w*50, h*50 );
 		ctx.drawImage(images[3], (centerX-w)*50, images[3].height-(h*50), w*50, h*50, (centerX-w)*50, centerY*50, w*50, h*50);
 
 		ctx.fillStyle = "red";	
