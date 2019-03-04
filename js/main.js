@@ -5,12 +5,14 @@ images = {
 		"assets/textures/dots-sm.png",
 		"assets/textures/vert.png",
 		"assets/textures/x.png",
+		"assets/textures/x.png",
 	],
 	textures2: [
 		"assets/textures/diag2.png",
 		"assets/textures/dots-md2.png",
 		"assets/textures/dots-sm2.png",
 		"assets/textures/vert2.png",
+		"assets/textures/x2.png",
 		"assets/textures/x2.png",
 	],
 	about: [
@@ -32,6 +34,7 @@ images = {
 		"assets/nyt/protopper.png",
 		"assets/nyt/provocations.png",
 		"assets/nyt/type.png",
+		"assets/nyt/type.png",
 	],
 	atavist: [
 		"assets/atavist/compose.png",
@@ -51,6 +54,7 @@ images = {
 		"assets/atavistbooks/moon1.png",
 		"assets/atavistbooks/announce01.png",
 		"assets/atavistbooks/announce02.png",
+		"assets/atavistbooks/announce02.png",
 	],
 	betterbook: [
 		"assets/betterbook/cocktails.png",
@@ -59,13 +63,15 @@ images = {
 		"assets/betterbook/wine2.png",
 		"assets/betterbook/dog.png",
 		"assets/betterbook/dog2.png",
+		"assets/betterbook/dog2.png",
 	],
 	bbvday: [
 		"assets/bbvday/3d-2.png",
 		"assets/bbvday/bbvday2019.png",
 		"assets/bbvday/uplifting.png",
 		"assets/bbvday/vday2012.png",
-		// "assets/bbvday/vday2016-1.png",
+		"assets/bbvday/2018-3.png",
+		"assets/bbvday/kanye.png",
 		"assets/bbvday/kanye.png",
 	]
 };
