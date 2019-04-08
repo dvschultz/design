@@ -718,7 +718,7 @@ section:after {
     background: #000;
 }
 
-.title h1, .title h2, .title p {
+.title h1, .title h2, .title p, .title li {
     color: white;
     -webkit-font-smoothing: antialiased;
 }
