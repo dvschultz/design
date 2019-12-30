@@ -30,9 +30,8 @@ images = {
 		"assets/ai/bladerunner-nfp.png",
 		"assets/ai/nfp.png",
 		"assets/ai/gan.png",
-		"assets/ai/gan.png",
-
-	]
+		"assets/ai/gan.png"
+	],
 	nyt: [
 		"assets/nyt/bn.png",
 		"assets/nyt/cards.png",
