@@ -23,6 +23,16 @@ images = {
 		"assets/about/pixels.png",
 		"assets/about/pixels.png",
 	],
+	ai: [
+		"assets/ai/rc1.png",
+		"assets/ai/styletransfer.png",
+		"assets/ai/B007.png",
+		"assets/ai/bladerunner-nfp.png",
+		"assets/ai/nfp.png",
+		"assets/ai/gan.png",
+		"assets/ai/gan.png",
+
+	]
 	nyt: [
 		"assets/nyt/bn.png",
 		"assets/nyt/cards.png",
