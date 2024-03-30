@@ -480,6 +480,10 @@ section h2 {
     margin: 3rem auto 4.5rem;
 } 
 
+.vimeo {
+    max-height: 90vh;
+}
+
 #twice-video {
     padding-bottom: 57%;
 }

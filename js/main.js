@@ -23,7 +23,7 @@ images = {
 		"assets/about/pixels.png",
 		"assets/about/pixels.png",
 	],
-	ai: [
+	vistaprint: [
 		"assets/ai/rc1.png",
 		"assets/ai/styletransfer.png",
 		"assets/ai/B007.png",
@@ -31,6 +31,25 @@ images = {
 		"assets/ai/nfp.png",
 		"assets/ai/gan.png",
 		"assets/ai/gan.png"
+	],
+	mailchimp: [
+		"assets/mailchimp/mailchimp-010.png",
+		"assets/mailchimp/mailchimp-018.png",
+		"assets/mailchimp/mailchimp-026a.png",
+		"assets/mailchimp/mailchimp-026b.png",
+		"assets/mailchimp/mailchimp-027.png",
+		"assets/mailchimp/mailchimp-028a.png",
+		"assets/mailchimp/mailchimp-028b.png"
+	],
+	ai: [
+		"assets/ai/advanced-stylegan.png",
+		"assets/ai/styletransfer.png",
+		"assets/ai/B007.png",
+		"assets/ai/bladerunner-nfp.png",
+		"assets/ai/nfp.png",
+		// "assets/ai/gan.png",
+		"assets/ai/nyt.png",
+		"assets/ai/bbvday.png"
 	],
 	nyt: [
 		"assets/nyt/bn.png",
