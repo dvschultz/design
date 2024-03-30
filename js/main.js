@@ -33,6 +33,8 @@ images = {
 		"assets/ai/gan.png"
 	],
 	mailchimp: [
+		"assets/mailchimp/sofia.png",
+		"assets/mailchimp/dashboard.png",
 		"assets/mailchimp/mailchimp-010.png",
 		"assets/mailchimp/mailchimp-018.png",
 		"assets/mailchimp/mailchimp-026a.png",
