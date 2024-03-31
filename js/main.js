@@ -24,13 +24,14 @@ images = {
 		"assets/about/pixels.png",
 	],
 	vistaprint: [
-		"assets/ai/rc1.png",
-		"assets/ai/styletransfer.png",
-		"assets/ai/B007.png",
-		"assets/ai/bladerunner-nfp.png",
-		"assets/ai/nfp.png",
-		"assets/ai/gan.png",
-		"assets/ai/gan.png"
+		"assets/vistaprint/account-dam.png",
+		"assets/vistaprint/account-team.png",
+		"assets/vistaprint/account.png",
+		"assets/vistaprint/brand-kit.png",
+		"assets/vistaprint/brand-shop.png",
+		"assets/vistaprint/brand-hub.png",
+		"assets/vistaprint/starter-pack.png",
+		"assets/vistaprint/reorders.png"
 	],
 	mailchimp: [
 		"assets/mailchimp/sofia.png",
